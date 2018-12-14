@@ -26,12 +26,9 @@ public class Renderer {
     }
 
     private void drawPixel(int x, int y) {
-        drawPixel(x, y, color,null);
+        drawPixel(x, y, color);
     }
-    private void drawPixel(int x, int y, int color){ drawPixel(x,y,color,null);}
-    private void drawPixel(int x, int y, int color,String axis){
-
-
+    private void drawPixel(int x, int y, int color){
         if (x < 0 || x >= 1000) return;
         if (y < 0 || y >= 800) return;
         img.setRGB(x, y, color);
@@ -110,8 +107,7 @@ public class Renderer {
         int max = Math.max(Math.abs(dx), Math.abs(dy));
 
         for (int i = 0; i <= max; i++) {
-            if (i == 0) drawPixel(Math.round(x), Math.round(y), color, axis);
-            else drawPixel(Math.round(x), Math.round(y), color);
+            drawPixel(Math.round(x), Math.round(y), color);
 
 
             x += g;

@@ -42,6 +42,7 @@ public class Pyramid extends SolidData {
         verticies.add(new Point3D(size1, 0, 0));    //2
         verticies.add(new Point3D(size1, size1, 0));    //3
         verticies.add(new Point3D(size1/2, size1/2, height));     //4
+        verticies.add(new Point3D(size1/2, size1/2, height/2));     //Centr
 
 
         indicies.add(0); indicies.add(1);
@@ -55,4 +56,10 @@ public class Pyramid extends SolidData {
         indicies.add(2); indicies.add(4);
         indicies.add(3); indicies.add(4);
     }
+
+    @Override
+    public Point3D getCentr() {
+        return null;
+    }
+
 }

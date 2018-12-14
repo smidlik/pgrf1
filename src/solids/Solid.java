@@ -13,10 +13,9 @@ public interface Solid {
 
     // indexy bodů společně propojených
     List<Integer> getIndicies();
-
-    Point3D getCentr();
-
-    Point3D getPosition();
+    default Point3D getCentr(){
+        return new Point3D();
+    }
 
     default int getColorByEdge(int index){
         return Color.BLACK.getRGB();

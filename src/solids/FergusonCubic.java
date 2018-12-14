@@ -15,7 +15,7 @@ public class FergusonCubic extends CubicData {
         verticies.add(new Point3D(1.,2.,3));
 
         for (int i = 0; i < verticies.size()-3; i+=3) {
-            cubics.add(new Cubic(Cubic.BEZIER,
+            cubics.add(new Cubic(Cubic.FERGUSON,
                     verticies.get(i),verticies.get(i+1),
                     verticies.get(i+2),verticies.get(i+3)));
         }
